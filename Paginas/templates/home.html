@@ -3,15 +3,21 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {% load bootstrap5 %}
+        {% load static %}
         {% bootstrap_css %}
         {% bootstrap_javascript %}
     </head>
-    <body class="">
-        <nav class="navbar p-1 border-bottom">
+    <body>
+        <nav class="navbar p-1 border-bottom border-black">
             <div class="container-fluid">
                 <a class="navbar-brand text-black fs-2" href="#">SGNF</a>
-                <button class="btn btn-outline-primary ms-auto my-2 my-sm-0" type="submit">Acessar conta</button>   
+                <a href="{% url 'login' %}">
+                <button class="btn btn-warning ms-auto my-2 my-sm-0" type="submit">Acessar conta</button>  
+                </a>
             </div>
         </nav>
+        <div style="height: 45rem;">
+            <img src="{%static 'HOME_SGNF.png'%}" class="w-100 h-100" alt="home">
+        </div>
     </body>
 </html>
