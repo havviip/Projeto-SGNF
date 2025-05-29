@@ -10,10 +10,17 @@
     <body>
         <nav class="navbar p-1 border-bottom border-black">
             <div class="container-fluid">
-                <a class="navbar-brand text-black fs-2" href="#">SGNF</a>
-                <a href="{% url 'login' %}">
-                <button class="btn btn-warning ms-auto my-2 my-sm-0" type="submit">Acessar conta</button>  
-                </a>
+                <a class="navbar-brand text-black fs-2" href="{% url 'home' %}">SGNF</a>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Acesse sua conta
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'login'%}">Aluno(a)</a></li>
+                        <li><a class="dropdown-item" href="{% url 'login' %}">Professor(a)</a></li>
+                        <li><a class="dropdown-item" href="{% url 'login_admin' %}">Adminsitrador</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div style="height: 45rem;">
