@@ -5,3 +5,6 @@ def home_alunos(request):
 
 def home_admin(request):
     return render(request, 'home_admin.html')
+
+def lista_admin(request):
+    return render(request, 'lista_admin.html')
