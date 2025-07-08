@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 from Paginas import views as views_pagina
 from Usuarios import views as views_usuarios
 
@@ -29,5 +30,9 @@ urlpatterns = [
     path('login_admin', views_pagina.login_admin, name='login_admin'),
     path('home_alunos', views_usuarios.home_alunos, name='home_alunos'),
     path('home_admin', views_usuarios.home_admin, name='home_admin'),
-    path('lista_admin', views_usuarios.lista_admin, name='lista_admin')
+    path('home_professores', views_usuarios.home_professores, name='home_professores'),
+    path('lista_admin', views_usuarios.lista_admin, name='lista_admin'),
+    path('cadastro_aluno', views_pagina.cadastro_aluno, name='cadastro_aluno'),
+    path('cadastro_professores', views_pagina.cadastro_professor, name="cadastro_professores"),
+    path('cadastro_disciplina', views_pagina.cadastro_disciplina, name='cadastro_disciplina')
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  

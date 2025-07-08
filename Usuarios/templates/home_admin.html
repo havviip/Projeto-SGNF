@@ -1,3 +1,4 @@
+{% extends "nav.html" %}
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load bootstrap5 %}
@@ -5,60 +6,43 @@
     {% load bootstrap_icons %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static "css/card.css" %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-1 border-bottom border-black">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-            <a class="navbar-brand text-black fs-2" href="{% url 'home' %}">SGNF</a>
-            <div class="d-flex">
-            <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'home_admin' %}">
-                    Adicionar
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'lista_admin' %}">
-                    Lista
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="btn" href="#">
-                    {% bs_icon 'person-circle' size='1.8em' %}
-                </a>
-            </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
+    {% block content %}
     <div class="row row-cols-1 row-cols-md-4 md-mb-3 mt-5 text-center d-flex justify-content-center">
         <div class="col">
-        <div class="card mb-4 rounded-4 shadow-sm">
-            <div class="card-body">
+        <a class="btn" href="{% url "cadastro_aluno" %}">
+        <div class="card m-2 rounded-4">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
                 {% bs_icon 'backpack2' size='5em' %}
-                <p class="mt-2">Cadastro do aluno</p>
+                <p class="mt-2 mb-0">Cadastro do aluno</p> 
             </div>
         </div>
+        </a>
         </div>
         <div class="col">
-            <div class="card mb-4 rounded-4 shadow-sm">
-                <div class="card-body">
-                    <a href="" class="btn">
+            <a href="{% url 'cadastro_professores' %}" class="btn">
+            <div class="card m-2 rounded-4">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center">
                         {% bs_icon 'pencil' size='4.3em' %}
-                        <p class="mt-2">Cadastro do professor</p>
-                    </a>
+                        <p class="mt-2 mb-0">Cadastro do professor</p>
+                    
                 </div>
             </div>
+            </a>
         </div>
         <div class="col">
-            <div class="card mb-4 rounded-4 shadow-sm">
-            <div class="card-body">
-                <a href="" class="btn">
+            <a href="{% url 'cadastro_disciplina' %}" class="btn">
+            <div class="card m-2 rounded-4">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
                     {% bs_icon 'journal-bookmark' size='4.3em' %}
-                    <p class="mt-2">Cadastro das disciplinas</p>
-                </a>
+                    <p class="mt-2 mb-0">Cadastro das disciplinas</p>
+                
             </div>
         </div>
+        </a>
         </div>
     </div>
+    {% endblock content %}
 </body>

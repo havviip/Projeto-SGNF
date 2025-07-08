@@ -8,3 +8,6 @@ def home_admin(request):
 
 def lista_admin(request):
     return render(request, 'lista_admin.html')
+
+def home_professores(request):
+    return render(request, 'home_professores.html')

@@ -5,6 +5,7 @@
     {% load bootstrap_icons %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static "css/card.css" %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary p-1 border-bottom border-black">
@@ -15,4 +16,36 @@
             </a>
             </div>
     </nav>
+    <div class="row row-cols-1 row-cols-md-4 md-mb-3 mt-5 text-center d-flex justify-content-center">
+        <div class="col">
+        <a href="" class="btn">
+        <div class="card mb-2 rounded-4">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                {% bs_icon 'newspaper' size='5em' %}
+                <p class="mt-2">Cadastro de avaliações</p>
+            </div>
+        </div>
+        </a>
+        </div>
+        <div class="col">
+            <a href="" class="btn">
+            <div class="card mb-4 rounded-4">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        {% bs_icon 'pencil' size='4.3em' %}
+                        <p class="mt-2 mb-0">Lança nota</p>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="" class="btn">
+            <div class="card mb-4 rounded-4">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                    {% bs_icon 'journal-bookmark' size='4.3em' %}
+                    <p class="mt-2 mb-0">Registra frequencia</p>
+            </div>
+        </div>
+        </a>
+        </div>
+    </div>
 </body>

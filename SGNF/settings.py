@@ -76,13 +76,23 @@ WSGI_APPLICATION = 'SGNF.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv('.env')
+
+DB_USER = os.getenv('DB_USER')
+DB_HOST = os.getenv('DB_HOST')
+DB_NOME = os.getenv('DB_NOME')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'BancoSGNF',
-        'USER': 'root',
-        'PASSWORD': 'system_dev02',
-        'HOST': 'localhost',
+        'NAME': DB_NOME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
         'PORT': '3306',
     }
 }
@@ -131,3 +141,4 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
