@@ -1,4 +1,3 @@
-{% extends "nav.html" %}
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load bootstrap5 %}
@@ -6,6 +5,7 @@
     {% load bootstrap_icons %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static "css/card.css" %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary p-1 border-bottom border-black">
@@ -16,17 +16,20 @@
             </a>
             </div>
     </nav>
-        <div class="position-absolute top-50 start-50 translate-middle w-50">
-        <div class="card w-auto">
-            <div class="card-title text-center border-bottom">Materias</div>
-            <div class="card-body">
+    <div class="row m-4">
+        <div class="col">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h3>Média Geral</h3>
             </div>
         </div>
-        <div class="card mt-3 w-auto">
-            <div class="card-title text-center border-bottom">Frequencia</div>
-            <div class="card-body">
+        </div>
+    </div>
+    <div class="row m-4">
+        <div class="col">
+            <div class="card w-auto">
 
             </div>
         </div>
-        </div>
+    </div>
 </body>

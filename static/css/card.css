@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -8,10 +12,10 @@
   box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
+
 .card:hover{
   background-color: #f0f0f0;
   border: 5px black;
   transform: scale(1.02);
   transition: all 0.3s ease;
-
 }

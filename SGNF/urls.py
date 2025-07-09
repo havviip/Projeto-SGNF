@@ -34,5 +34,5 @@ urlpatterns = [
     path('lista_admin', views_usuarios.lista_admin, name='lista_admin'),
     path('cadastro_aluno', views_pagina.cadastro_aluno, name='cadastro_aluno'),
     path('cadastro_professores', views_pagina.cadastro_professor, name="cadastro_professores"),
-    path('cadastro_disciplina', views_pagina.cadastro_disciplina, name='cadastro_disciplina')
+    path('cadastro_disciplina', views_pagina.cadastro_disciplina, name='cadastro_disciplina'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  
