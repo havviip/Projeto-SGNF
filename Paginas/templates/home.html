@@ -7,7 +7,7 @@
     {% bootstrap_javascript %}
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-1 border-bottom border-black">
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary p-1">
         <div class="container-fluid">
             <a class="navbar-brand text-black fs-2" href="{% url 'home' %}">SGNF</a>
             <div class="dropdown">
@@ -22,9 +22,17 @@
             </div>
         </div>
     </nav>
-    <div class="container my-4">
-    <div class="d-flex justify-content-center">
-        <img src="{% static 'HOME_SGNF.png' %}" class="w-100 img-fluid rounded shadow" style="max-width: 90vw; height 50px;" alt="Página inicial SGNF">
+
+    <div class="w-100">
+        <img src="{% static 'HOME_SGNF.png' %}" class="img-fluid w-100" alt="Página inicial SGNF">
     </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                
+            </div>
+        </div>
     </div>
+
 </body>
