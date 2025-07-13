@@ -16,8 +16,8 @@
                     Acesse sua conta
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{% url 'login'%}">Aluno(a)</a></li>
-                    <li><a class="dropdown-item" href="{% url 'login' %}">Professor(a)</a></li>
+                    <li><a class="dropdown-item" href="{% url 'login_aluno'%}">Aluno(a)</a></li>
+                    <li><a class="dropdown-item" href="{% url 'login_professor' %}">Professor(a)</a></li>
                     <li><a class="dropdown-item" href="{% url 'login_admin' %}">Adminsitrador</a></li>
                 </ul>
             </div>
@@ -27,19 +27,19 @@
         <img src="{% static 'img/HOME_SGNF.png' %}" class="img-fluid w-100" alt="Página inicial SGNF">
     </div>
 
-    <div class="row m-2">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 m-2">
         <div class="col">
-            <div class="card w-75 rounded-5">
+            <div class="card rounded-5">
                 <img src="{% static "img/CARD_HOME1.png" %}" class="img-fluid" alt="card_img1">
             </div>
         </div>
         <div class="col">
-            <div class="card w-75 rounded-5">
+            <div class="card rounded-5">
                 <img src="{% static "img/CARD_HOME2.png" %}" class="img-fluid" alt="card_img2">
             </div>
         </div>
         <div class="col">
-            <div class="card w-75 rounded-5">
+            <div class="card rounded-5">
                 <img src="{% static "img/CARD_HOME3.png" %}" class="img-fluid" alt="card_img3">
             </div>
         </div>

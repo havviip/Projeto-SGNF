@@ -26,7 +26,8 @@ from Usuarios import views as views_usuarios
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views_pagina.home, name='home'),
-    path('login', views_pagina.login, name='login'),
+    path('login_aluno', views_pagina.login_aluno, name='login_aluno'),
+    path('login_professor', views_pagina.login_professor, name='login_professor'),
     path('login_admin', views_pagina.login_admin, name='login_admin'),
     path('home_alunos', views_usuarios.home_alunos, name='home_alunos'),
     path('home_admin', views_usuarios.home_admin, name='home_admin'),
@@ -34,5 +35,5 @@ urlpatterns = [
     path('lista_admin', views_usuarios.lista_admin, name='lista_admin'),
     path('cadastro_aluno', views_pagina.cadastro_aluno, name='cadastro_aluno'),
     path('cadastro_professores', views_pagina.cadastro_professor, name="cadastro_professores"),
-    path('cadastro_disciplina', views_pagina.cadastro_disciplina, name='cadastro_disciplina'),
+    path('cadastro_turma', views_pagina.cadastro_turma, name='cadastro_turma'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  
