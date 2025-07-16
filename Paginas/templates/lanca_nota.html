@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load bootstrap5 %}
+    {% load static %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="card position-fixed top-50 start-50 translate-middle p-4 shadow-lg bg-body-tertiary"
+         style="max-width: 400px; width: 90%;">
+                <div class="card-body">
+                   <h2>Lança nota</h2>
+                   <form action="">
+                    <label for="nota" class="form-label">Nota</label>
+                    <input type="number" class="form-control mb-3">
+                    <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle mb-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Alunos
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-50">Enviar</button>
+                    <a class="btn btn-danger" href="{% url 'home_professores' %}">Voltar</a>
+                   </form>
+                </div>
+            </div>
+</body>

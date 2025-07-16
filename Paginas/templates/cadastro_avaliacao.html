@@ -10,14 +10,16 @@
     <div class="card position-fixed top-50 start-50 translate-middle p-4 shadow-lg bg-body-tertiary"
          style="max-width: 400px; width: 90%;">
                 <div class="card-body">
-                   <h2>Inserir aluno</h2>
+                   <h2>Inserir avaliações</h2>
                    <form action="">
-                    <label for="nome" class="form-label">Nome do Aluno</label>
+                    <label for="tipo" class="form-label">Tipo de avaliação</label>
                     <input type="text" class="form-control mb-3">
-                    <label for="matricula" class="form-label">Matricula</label>
-                    <input type="text" class="form-control mb-3">
+                    <label for="data" class="form-label">Data</label>
+                    <input type="date" class="form-control mb-3">
+                    <label for="descrica" class="form-label">Descrição</label>
+                    <textarea class="form-control mb-3" aria-label="With textarea"></textarea>
                     <button type="submit" class="btn btn-primary w-50">Enviar</button>
-                    <a class="btn btn-danger" href="{% url 'home_admin' %}">Voltar</a>
+                    <a class="btn btn-danger" href="{% url 'home_professores' %}">Voltar</a>
                    </form>
                 </div>
             </div>

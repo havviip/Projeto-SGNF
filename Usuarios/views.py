@@ -19,3 +19,7 @@ def lista_admin(request):
 def home_professores(request):
     return render(request, 'home_professores.html')
 
+def lista_avaliacao(request):
+    registro = Nota.objects.select_related('aluno', 'avaliacao').all()
+    return render(request, 'lista_avaliacao.html', {'registro':registro})
+

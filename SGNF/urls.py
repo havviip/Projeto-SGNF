@@ -37,4 +37,7 @@ urlpatterns = [
     path('cadastro_professores', views_pagina.cadastro_professor, name="cadastro_professores"),
     path('cadastro_turma', views_pagina.cadastro_turma, name='cadastro_turma'),
     path('editar_aluno', views_pagina.editar_aluno, name='editar_aluno'),
+    path('cadastro_avaliacao', views_pagina.cadastro_avaliacao, name='cadastro_avaliacao'),
+    path('lanca__nota', views_pagina.lanca_nota, name='lanca_nota'),
+    path('lista_avaliacao', views_usuarios.lista_avaliacao, name='lista_avaliacao')
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  

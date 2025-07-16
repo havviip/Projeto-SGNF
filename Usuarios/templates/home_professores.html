@@ -19,7 +19,7 @@
     </nav>
     <div class="row row-cols-1 row-cols-md-4 md-mb-3 mt-5 text-center d-flex justify-content-center">
         <div class="col">
-        <a href="" class="btn">
+        <a href="{% url 'cadastro_avaliacao' %}" class="btn">
         <div class="card mb-2 rounded-4">
             <div class="card-body d-flex flex-column align-items-center justify-content-center">
                 {% bs_icon 'newspaper' size='5em' %}
@@ -29,7 +29,7 @@
         </a>
         </div>
         <div class="col">
-            <a href="" class="btn">
+            <a href="{% url 'lanca_nota' %}" class="btn">
             <div class="card mb-4 rounded-4">
                 <div class="card-body d-flex flex-column align-items-center justify-content-center">
                         {% bs_icon 'pencil' size='4.3em' %}
@@ -49,7 +49,7 @@
         </a>
         </div>
         <div class="col">
-            <a href="" class="btn">
+            <a href="{% url 'lista_avaliacao' %}" class="btn">
                 <div class="card mb-4 rounded-4">
                     <div class="card-body d-flex flex-column align-items-center justify-content-center">
                         {% bs_icon 'card-checklist' size='4.3em' %}

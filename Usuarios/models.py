@@ -68,6 +68,13 @@ class Nota(models.Model):
         blank = True,
         db_column = 'id_avaliacao'
     )
+    aluno= models.ForeignKey(
+        Aluno,
+        on_delete = models.SET_NULL,
+        null = True,
+        blank = True,
+        db_column = 'id_aluno'
+    )
 
     class Meta:
         managed = False

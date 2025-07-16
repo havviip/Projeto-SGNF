@@ -1,0 +1,42 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load bootstrap5 %}
+    {% load static %}
+    {% load bootstrap_icons %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container">
+        <div class="card">
+            <div class="car-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Aluno</th>
+                                <th>Turma</th>
+                                <th>Avaliações</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in registros %}
+                            <tr>
+                                <td>{{ item.id_aluno.nome }}</td>
+                                <td>{{ item.id_turma.nome }}</td>
+                                <td>{{ item.id_avaliacao.tipo }}</td>
+                                <td>{{ item.valor }}</td>
+                            </tr>
+                            {% endfor %} 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+

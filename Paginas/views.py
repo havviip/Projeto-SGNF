@@ -23,3 +23,9 @@ def cadastro_turma(request):
 
 def editar_aluno(request):
     return render(request, 'editar_aluno.html')
+
+def cadastro_avaliacao(request):
+    return render(request, 'cadastro_avaliacao.html')
+
+def lanca_nota(request):
+    return render(request, 'lanca_nota.html')
