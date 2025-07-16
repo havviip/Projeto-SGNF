@@ -5,7 +5,8 @@
     {% load static %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-    <link rel="stylesheet" href="{% static "css/home.css" %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary p-1">
@@ -18,31 +19,35 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{% url 'login_aluno'%}">Aluno(a)</a></li>
                     <li><a class="dropdown-item" href="{% url 'login_professor' %}">Professor(a)</a></li>
-                    <li><a class="dropdown-item" href="{% url 'login_admin' %}">Adminsitrador</a></li>
+                    <li><a class="dropdown-item" href="{% url 'login_admin' %}">Administrador</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    
     <div class="w-100">
-        <img src="{% static 'img/HOME_SGNF.png' %}" class="img-fluid w-100" alt="Página inicial SGNF">
+        <img src="{% static 'img/HOME_SGNF.png' %}" class="img-fluid hero-image" alt="Página inicial SGNF">
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 m-2">
-        <div class="col">
-            <div class="card rounded-5">
-                <img src="{% static "img/CARD_HOME1.png" %}" class="img-fluid" alt="card_img1">
+    <div class="container mt-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card rounded-5">
+                    <img src="{% static 'img/CARD_HOME1.png' %}" class="img-fluid" alt="card_img1">
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card rounded-5">
-                <img src="{% static "img/CARD_HOME2.png" %}" class="img-fluid" alt="card_img2">
+            <div class="col">
+                <div class="card rounded-5">
+                    <img src="{% static 'img/CARD_HOME2.png' %}" class="img-fluid" alt="card_img2">
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card rounded-5">
-                <img src="{% static "img/CARD_HOME3.png" %}" class="img-fluid" alt="card_img3">
+            <div class="col">
+                <div class="card rounded-5">
+                    <img src="{% static 'img/CARD_HOME3.png' %}" class="img-fluid" alt="card_img3">
+                </div>
             </div>
         </div>
     </div>
 
 </body>
+

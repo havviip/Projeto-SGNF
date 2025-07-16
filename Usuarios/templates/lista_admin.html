@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -6,35 +8,25 @@
     {% load bootstrap_icons %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    <title>Lista</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-1 border-bottom border-black">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-            <a class="navbar-brand text-black fs-2" href="{% url 'home' %}">SGNF</a>
-            <div class="d-flex">
-            <ul class="nav nav-pills">
+<nav class="navbar navbar-expand-lg bg-body-tertiary p-1 border-bottom border-black">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand text-black fs-2" href="{% url 'home' %}">SGNF</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link" href="{% url 'home_admin' %}">Adicionar</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'lista_admin' %}">Lista</a></li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'home_admin' %}">
-                    Adicionar
-                </a>
+                <a class="btn">{% bs_icon 'person-circle' size='1.8em' %}</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'lista_admin' %}">
-                    Lista
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="btn" href="">
-                    {% bs_icon 'person-circle' size='1.8em' %}
-                </a>
-            </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container my-4 px-3">
-        <div class="card position-relative">
-            <div class="ms-3 mt-3 ">
+        </ul>
+    </div>
+</nav>
+
+<div class="container my-4 px-3">
+    <div class="card position-relative">
+        <div class="ms-3 mt-3">
             <a class="btn btn-secondary btn-sm dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Escolha
             </a>
@@ -42,45 +34,49 @@
                 <li><a class="dropdown-item" href="?tipo=professores">Professores</a></li>
                 <li><a class="dropdown-item" href="?tipo=alunos">Alunos</a></li>
             </ul>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
                 <table class="table">
-                <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Matrícula</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-           <tbody>
-            {% for item in registros %}
-            <tr>
-                {% if tipo == 'alunos' %}
-                <td>{{ item.nome }}</td>
-                <td>{{ item.matricula }}</td>
-                <td>
-                    <button type="button" class="btn btn-primary btn-sm m-1">Editar</button>
-                    <button type="button" class="btn btn-danger btn-sm m-1">Excluir</button>
-                </td>
-                {% else %}
-                <td>{{ item.nomeProfessor }}</td>
-                <td>{{ item.matriculaProfessor }}</td>
-                <td>
-                    <button type="button" class="btn btn-primary btn-sm m-1">Editar</button>
-                    <button type="button" class="btn btn-danger btn-sm m-1">Excluir</button>
-                </td>
-                {% endif %}
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="2">Nenhum {{ tipo }} cadastrado.</td>
-            </tr>
-            {% endfor %}
-            </tbody>
-            </table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Matrícula</th>
+                            <th>Turma</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in registros %}
+                        <tr>
+                            {% if tipo == 'alunos' %}
+                                <td>{{ item.nome }}</td>
+                                <td>{{ item.matricula }}</td>
+                                <td>{{ item.turma.nome_turma|default:"Sem turma" }}</td>
+                                <td>
+                                <a class="btn btn-primary btn-sm m-1">Editar</a>
+                                <button type="submit" class="btn btn-danger btn-sm m-1">Excluir</button>
+                                </td>
+                            {% else %}
+                                <td>{{ item.nomeProfessor }}</td>
+                                <td>{{ item.matriculaProfessor }}</td>
+                                <td>-</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm m-1">Editar</button>
+                                    <button type="button" class="btn btn-danger btn-sm m-1">Excluir</button>
+                                </td>
+                            {% endif %}
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="4" class="text-center">Nenhum {{ tipo }} cadastrado.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    </div>
+</div>
 </body>
+</html>

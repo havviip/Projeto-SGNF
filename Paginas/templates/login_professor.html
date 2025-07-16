@@ -7,15 +7,17 @@
     {% bootstrap_javascript %}
 </head>
 <body>
-    <div class="card position-absolute top-50 start-50 translate-middle p-2 w-25 shadow-lg bg-body-tertiary">
+    <div class="card position-fixed top-50 start-50 translate-middle p-4 shadow-lg bg-body-tertiary"
+         style="max-width: 400px; width: 90%;">
         <div class="card-body ">
             <form>
                 <h2>Acesse sua conta</h2>
                 <label for="matricula" class="form-label">Matricula</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control mb-3">
                 <label for="senha" class="form-label">Senha</label>
-                <input type="password" class="form-control">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="password" class="form-control mb-3">
+                <button type="submit" class="btn btn-primary w-50">Logar</button>
+                <a class="btn btn-danger" href="{% url 'home' %}">Voltar</a>
             </form>  
     </div>
     </div>

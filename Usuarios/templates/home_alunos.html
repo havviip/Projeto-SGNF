@@ -6,7 +6,6 @@
     {% load bootstrap_icons %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-    <link rel="stylesheet" href="{% static "css/card.css" %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary p-1 border-bottom border-black">
@@ -17,20 +16,41 @@
             </a>
             </div>
     </nav>
-    <div class="row m-4">
-        <div class="col">
-        <div class="card h-100">
-            <div class="card-body text-center">
-                <h3>Média Geral</h3>
+    <div class="container container my-4 px-3">
+        <div class="row mb-3">
+            <div class="col">
+            <div class="card p-1" style="width: 10em; height: 5em;">
+                <div class="card-body"  style="width: 10em; height: 5em;">
+                    <h4>Média Geral:</h4>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col">
+                <div class="card w-75">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Avaliações</th>
+                                        <th>Notas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in registro %}
+                                    <tr>
+                                        <td>{{ item.avaliacao.tipo }}</td>
+                                        <td>{{ item.valor }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
-    </div>
-    <div class="row m-4">
-        <div class="col">
-            <div class="card w-auto">
-
-            </div>
-        </div>
-    </div>
-</body>
+    </body>

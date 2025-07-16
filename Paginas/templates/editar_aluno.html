@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load bootstrap5 %}
+    {% load static %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="card position-fixed top-50 start-50 translate-middle p-4 shadow-lg bg-body-tertiary"
+         style="max-width: 400px; width: 90%;">
+            <h3>Atualizar aluno</h3>
+            <div class="card-body">
+                <form action="">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control">
+                    <label for="matricula">Matricula</label>
+                    <input type="text" class="form-control">
+                    <label for="senha_aluno">Senha</label>
+                    <input type="text" class="form-control">
+                    <button class="btn btn-primary m-2">Atualizar</button>
+                    <button class="btn btn-danger m-2">Cancelar</button>
+                </form>
+            </div>
+        </div>
+</body>

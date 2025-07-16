@@ -20,3 +20,6 @@ def cadastro_professor(request):
 
 def cadastro_turma(request):
     return render(request, 'cadastro_turma.html')
+
+def editar_aluno(request):
+    return render(request, 'editar_aluno.html')
